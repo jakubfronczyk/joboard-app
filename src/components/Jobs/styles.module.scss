@@ -1,9 +1,29 @@
-.container {
-   max-width: 1128px;
-   margin: 0 auto;
-   padding: 0 24px;
+.jobsWrapper {
+   display: flex;
+   flex-direction: column;
+   padding: 0 40px;
+   background-color: #f8f8f8;
+   height: 100vh;
+   margin-top: 45px;
+}
 
-   @media only screen and (max-width: 768px) {
-      padding: 0 8px;
+.searchContainer {
+   display: flex;
+   gap: 12px;
+}
+
+.inputContainer {
+   position: relative;
+
+   input {
+      width: 350px;
+      height: 50px;
+      border-radius: 5px;
+   }
+
+   svg {
+      position: absolute;
+      bottom: 7px;
+      right: 7px;
    }
 }

@@ -112,7 +112,7 @@ const jobList = [
    },
 ];
 
-const Jobs = () => {
+const JobContainer = () => {
    return (
       <div className={styles.jobsWrapper}>
          <div className={styles.searchContainer}>
@@ -159,4 +159,4 @@ const Jobs = () => {
    );
 };
 
-export default Jobs;
+export default JobContainer;

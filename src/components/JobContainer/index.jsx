@@ -1,14 +1,13 @@
 import React from 'react';
 import styles from './styles.module.scss';
+import JobItem from './JobItem';
 import img1 from '../../assets/Rectangle3.png';
 import img2 from '../../assets/p&g.png';
 import img3 from '../../assets/sept.png';
 import img4 from '../../assets/nf.png';
 import img5 from '../../assets/panda.png';
 import img6 from '../../assets/dyson.png';
-import { SearchIcon } from '../Icons/SearchIcon';
-import { LocationIcon } from '../Icons/LocationIcon';
-import { DotIcon } from '../Icons/DotIcon';
+import InputContainer from './InputContainer';
 
 const jobList = [
    {
@@ -115,43 +114,14 @@ const jobList = [
 const JobContainer = () => {
    return (
       <div className={styles.jobsWrapper}>
-         <div className={styles.searchContainer}>
-            <div className={styles.inputContainer}>
-               <input type="text" placeholder="Search for" />
-               <SearchIcon className={styles.searchIcon} />
-            </div>
-            <div className={styles.inputContainer}>
-               <input type="text" placeholder="Location" />
-               <div className={styles.iconContainer}>
-                  <LocationIcon className={styles.locationIcon} />
-                  <DotIcon className={styles.dotIcon} />
-               </div>
-            </div>
-         </div>
+         <InputContainer />
 
          {/* Jobs container */}
          <div className={styles.jobsContainer}>
             <p className={styles.offers}>36 offers found</p>
             <div className={styles.jobList}>
                {jobList.map((job) => (
-                  <div className={styles.job} key={job.id}>
-                     <div className={styles.imgContainer}>
-                        <img src={job.img} alt="My Image" />
-                     </div>
-                     <div className={styles.jobContent}>
-                        <div className={styles.jobTitle}>
-                           <p>{job.title}</p>
-                           <p>{job.date}</p>
-                        </div>
-                        <ul className={styles.jobDetails}>
-                           <li>{job.company}</li>
-                           <li>{job.location}</li>
-                           <li>{job.remote}</li>
-                           <li>{job.level}</li>
-                           <li>{job.salary}</li>
-                        </ul>
-                     </div>
-                  </div>
+                  <JobItem key={job.id} job={job} />
                ))}
             </div>
          </div>

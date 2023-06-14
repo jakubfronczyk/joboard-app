@@ -1,9 +1,8 @@
 import './App.css';
 import { Container } from './components/Container/Container';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import Filters from './components/Filters';
 import JobContainer from './components/JobContainer';
-import JobOfferList from './components/JobsOfferList';
+import FiltersContainer from './components/FilterContainer';
 
 const queryClient = new QueryClient();
 
@@ -11,9 +10,9 @@ function App() {
    return (
       <QueryClientProvider client={queryClient}>
          <Container>
-            <Filters />
+            <FiltersContainer />
             <JobContainer />
-            <JobOfferList />
+            {/* <JobOfferList /> */}
          </Container>
       </QueryClientProvider>
    );

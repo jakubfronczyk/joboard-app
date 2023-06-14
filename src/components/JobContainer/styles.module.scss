@@ -1,0 +1,117 @@
+.jobsWrapper {
+   display: flex;
+   flex-direction: column;
+   padding: 0 40px;
+   background-color: #f8f8f8;
+   height: 100vh;
+   padding-top: 45px;
+}
+
+.jobsContainer {
+   display: flex;
+   flex-direction: column;
+   padding-top: 24px;
+
+   .offers {
+      padding-bottom: 16px;
+
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 16px;
+      letter-spacing: -0.05em;
+   }
+}
+
+.jobList {
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+}
+
+.job {
+   display: flex;
+   background-color: #ffffff;
+   width: 100%;
+   border: 1px solid #dadada;
+   border-radius: 5px;
+   padding: 24px;
+   gap: 24px;
+}
+
+.imgContainer {
+   flex-shrink: 0;
+}
+
+.jobContent {
+   flex-grow: 1;
+   display: flex;
+   flex-direction: column;
+}
+
+.jobTitle {
+   display: flex;
+   justify-content: space-between;
+   flex-grow: 4;
+
+   p:first-child {
+      font-family: Poppins;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 26px;
+      letter-spacing: -0.02em;
+      text-align: left;
+      color: #212121;
+   }
+
+   p:last-child {
+      font-family: Poppins;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 12px;
+      letter-spacing: 0em;
+      text-align: right;
+      color: #545454;
+   }
+}
+
+.jobDetails {
+   display: flex;
+   list-style: none;
+
+   li {
+      padding-left: 14px;
+      padding-right: 14px;
+
+      font-family: Poppins;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 12px;
+      letter-spacing: 0em;
+   }
+
+   li:first-child {
+      padding-left: 0;
+
+      font-family: Poppins;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 12px;
+      letter-spacing: 0em;
+   }
+
+   li:last-child {
+      padding-right: 0;
+      font-family: Poppins;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 12px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #9564d4;
+   }
+
+   li:not(:last-child) {
+      border-right: 1px solid grey;
+   }
+}

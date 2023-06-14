@@ -8,6 +8,16 @@
       padding-bottom: 0;
    }
 
+   .title {
+      font-family: Poppins;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 12px;
+      letter-spacing: 0em;
+
+      padding-bottom: 16px;
+   }
+
    .checkboxContainer {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -43,14 +53,4 @@
          bottom: 1px;
       }
    }
-}
-
-h1 {
-   font-family: Poppins;
-   font-size: 27px;
-   font-weight: 700;
-   line-height: 27px;
-   letter-spacing: -0.07em;
-
-   padding-bottom: 40px;
 }

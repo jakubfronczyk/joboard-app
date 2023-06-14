@@ -1,10 +1,13 @@
 import './App.css';
 import { Container } from './components/Container/Container';
+import FilterContainer from './components/FilterContainer';
+import Jobs from './components/JobContainer';
 
 function App() {
    return (
       <Container>
-         <h1>JoBoard 🛹</h1>
+         <FilterContainer />
+         <Jobs />
       </Container>
    );
 }

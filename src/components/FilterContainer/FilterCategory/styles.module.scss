@@ -1,0 +1,56 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+.typeContainer {
+   padding: 18px 0;
+   border-top: 1px solid #dadada;
+
+   &:last-child {
+      padding-bottom: 0;
+   }
+
+   .title {
+      font-family: Poppins;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 12px;
+      letter-spacing: 0em;
+
+      padding-bottom: 16px;
+   }
+
+   .checkboxContainer {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+
+      input[type='checkbox'] {
+         appearance: none;
+         -webkit-appearance: none;
+         -moz-appearance: none;
+         width: 19px;
+         height: 19px;
+         border-radius: 5px;
+         border: 1px solid #dadada;
+         outline: none;
+         transition: border-color 0.3s;
+      }
+
+      /* Change the border color when checkbox is checked */
+      input[type='checkbox']:checked {
+         border-color: #9564d4;
+      }
+
+      /* Change the inside color when checkbox is checked */
+      input[type='checkbox']:checked::before {
+         position: relative;
+         content: '\f00c';
+         font-family: 'FontAwesome';
+         font-weight: 200;
+         font-size: 12px;
+         text-align: center;
+         color: #9564d4;
+         left: 3px;
+         bottom: 1px;
+      }
+   }
+}

@@ -1,17 +1,14 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import { SearchIcon } from '../../Icons/SearchIcon';
 import { LocationIcon } from '../../Icons/LocationIcon';
 import { DotIcon } from '../../Icons/DotIcon';
+import SearchForContainer from './SearchForContainer';
 
 const InputContainer = () => {
    return (
-      <div className={styles.searchContainer}>
-         <div className={styles.inputContainer}>
-            <input type="text" placeholder="Search for" />
-            <SearchIcon className={styles.searchIcon} />
-         </div>
-         <div className={styles.inputContainer}>
+      <div className={styles.inputsContainer}>
+         <SearchForContainer />
+         <div className={styles.locationContainer}>
             <input type="text" placeholder="Location" />
             <div className={styles.iconContainer}>
                <LocationIcon className={styles.locationIcon} />

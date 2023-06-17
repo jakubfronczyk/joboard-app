@@ -3,10 +3,7 @@ import { useQuery } from 'react-query';
 
 const JobOfferList = () => {
    const { data, isLoading, error } = useQuery('jobOffers', () => {
-      fetch('http://139.59.154.199:49160/api/v1/joboard/offers').then(
-         (response) => response.json(),
-         console.log(response),
-      );
+      fetch('https://training.nerdbord.io/api/v1/joboard/offers').then((data) => data.json());
    });
 
    console.log(data);

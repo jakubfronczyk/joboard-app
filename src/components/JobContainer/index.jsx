@@ -1,6 +1,7 @@
 import React from 'react';
 import { useQuery } from 'react-query';
 import styles from './styles.module.scss';
+import fetchJobOffers from '../../api/jobOffers';
 import JobItem from './JobItem';
 import InputContainer from './InputContainer';
 
@@ -11,13 +12,7 @@ const JobContainer = () => {
       error,
    } = useQuery({
       queryKey: ['jobsOffer'],
-      queryFn: () =>
-         fetch('https://training.nerdbord.io/api/v1/joboard/offers')
-            .then((response) => response.json())
-            .then((data) => {
-               console.log(data); // Log the JSON data
-               return data;
-            }),
+      queryFn: fetchJobOffers,
    });
 
    if (isLoading) {
@@ -27,11 +22,11 @@ const JobContainer = () => {
    if (error) {
       return <div>Error fetching job offers: {error.message}</div>;
    }
+
    return (
       <div className={styles.jobsWrapper}>
          <InputContainer />
 
-         {/* Jobs container */}
          <div className={styles.jobsContainer}>
             <p className={styles.offers}>36 offers found</p>
             <div className={styles.jobList}>

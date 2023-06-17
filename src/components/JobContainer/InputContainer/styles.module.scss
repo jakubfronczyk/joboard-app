@@ -1,0 +1,36 @@
+.searchContainer {
+   display: flex;
+   gap: 12px;
+}
+
+.inputContainer {
+   position: relative;
+
+   input {
+      padding: 24px;
+      width: 350px;
+      height: 50px;
+      border-radius: 5px;
+      border: none;
+      box-shadow: 0px 0px 4px 0px hsla(266, 57%, 61%, 0.4);
+      outline: none;
+   }
+
+   .searchIcon {
+      position: absolute;
+      top: 16px;
+      right: 24px;
+   }
+
+   .iconContainer {
+      position: absolute;
+      top: 14.5px;
+      right: 24px;
+
+      .dotIcon {
+         position: absolute;
+         top: 3px;
+         right: 4.95px;
+      }
+   }
+}

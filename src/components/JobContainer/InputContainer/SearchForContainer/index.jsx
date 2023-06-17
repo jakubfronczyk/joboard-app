@@ -48,13 +48,15 @@ const SearchForContainer = () => {
 
    const slicedJobTitles = filteredJobTitles.slice(0, 6);
 
+   const hasSearchResults = filteredJobTitles.length > 0;
+
    return (
       <div className={styles.inputContainer}>
          <input type="text" value={value} onChange={onChange} placeholder="Search for" />
          <SearchIcon className={styles.searchIcon} />
          <ul
             className={styles.searchTermContainer}
-            style={{ display: value !== '' ? 'block' : 'none' }}
+            style={{ display: hasSearchResults ? 'block' : 'none' }}
          >
             {slicedJobTitles.map((jobOffer) => (
                <li key={jobOffer._id} onClick={() => onSearch(jobOffer.title)}>

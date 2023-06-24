@@ -4,7 +4,7 @@
 
 This project is a job board for tech people.
 
----
+----
 
 ### How to start 🚀
 
